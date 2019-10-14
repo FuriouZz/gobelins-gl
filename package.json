@@ -4,17 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "wk start"
   },
-  "author": "",
+  "author": "Christophe MASSOLIN",
   "license": "ISC",
   "dependencies": {
+    "lodash-es": "^4.17.15",
+    "lol": "github:wk-js/lol.js#448f212c3862e5499aacba26d0ef5b167cc1f2f8",
     "three": "^0.109.0"
   },
   "devDependencies": {
-    "http-server": "^0.11.1",
     "rollup": "^1.23.1",
+    "rollup-plugin-livereload": "^1.0.4",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-typescript": "^1.0.1"
+    "rollup-plugin-serve": "^1.0.1",
+    "wk": "github:wk-js/command"
   }
 }

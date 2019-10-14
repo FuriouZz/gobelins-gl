@@ -1,12 +1,8 @@
 [commands.rollup]
-command = "node rollup.js"
+command = "rollup -c rollup.config.js"
 description = "Run rollup"
-
-[commands.server]
-command = "http-server"
 binPath = "./node_modules/.bin"
-description = "Run http-server"
 
 [concurrents.start]
-commands = [ "server", "rollup" ]
-description = "Run http-server and rollup"
+commands = [ "rollup -w" ]
+description = "Run rollup"
