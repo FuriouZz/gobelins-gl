@@ -1,0 +1,18 @@
+[commands.install_project]
+command = "npm install"
+visible = false
+
+[commands.install_slides]
+command = "npm install"
+cwd = "./slides"
+visible = false
+
+[commands.rollup]
+command = "rollup -c rollup.config.js"
+binPath = "./node_modules/.bin"
+visible = false
+
+[commands.slides]
+command = "npm start -- --port=${port}"
+cwd = "./slides"
+visible = false

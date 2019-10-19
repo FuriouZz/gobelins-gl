@@ -1,8 +1,9 @@
-[commands.rollup]
-command = "rollup -c rollup.config.js"
-description = "Run rollup"
-binPath = "./node_modules/.bin"
+imports = [ "./Commands-hidden.toml" ]
+
+[concurrents.install]
+commands = [ "install_project", "install_slides" ]
+description = "Install dependencies"
 
 [concurrents.start]
-commands = [ "rollup -w" ]
+commands = [ "slides --var.port=8000", "rollup -w" ]
 description = "Run rollup"
