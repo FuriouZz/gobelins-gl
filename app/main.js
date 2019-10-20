@@ -1,7 +1,6 @@
 import { Framework } from './framework';
 import { PerspectiveCamera, Scene, SphereBufferGeometry, Mesh, WebGLRenderer, WebGLRenderTarget, ShaderMaterial } from 'three';
 import * as AudioUtils from './utils/audio'
-import "slides.html"
 
 class Main {
 
