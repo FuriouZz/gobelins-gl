@@ -49,7 +49,7 @@ async function parseMain(config) {
     }
   }
 
-  return slides.join('\n\n---\n\n')
+  return slides.join('\n')
 }
 
 async function parseSlides(path) {

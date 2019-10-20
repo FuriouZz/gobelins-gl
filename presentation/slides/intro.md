@@ -2,12 +2,12 @@
   # La 3D temps réel
 </slide>
 
-<slide>
-  ## Temps réel vs pré-calculé
+<slide main>
+  # Temps réel vs pré-calculé
 </slide>
 
-<slide>
-  ## Les spécificités du temps réel
+<slide main>
+  # Les spécificités du temps réel
 </slide>
 
 <slide>
@@ -52,53 +52,7 @@
 </slide>
 
 <slide>
-
   Utiliser des assets précalculés
   * Bake de texture
   * Texture tricks
-</slide>
-
-<slide>
-  Définitions
-</slide>
-
-<slide>
-  Vertex
-  * Position
-  * UV
-  * Normal
-</slide>
-
-<slide>
-  Fragment
-  * Color
-</slide>
-
-<slide>
-  Shader
-  * Vertex shader exécuté pour chaque vertex
-  * Fragment shader exécuté pour chaque fragment
-</slide>
-
-<slide>
-  Geometry
-  * Tableau de vertex
-  * La réprésentation d'un vertex
-</slide>
-
-<slide>
-  Material
-  * Vertex et fragment shader compilés
-</slide>
-
-<slide>
-  Texture
-  * Image
-  * Video
-  * Canvas
-  * Texture (framebuffer)
-</slide>
-
-<slide>
-  Bake
 </slide>
