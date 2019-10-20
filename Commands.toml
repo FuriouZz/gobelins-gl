@@ -1,9 +1,28 @@
-imports = [ "./Commands-hidden.toml" ]
+[commands.presentation]
+command = "node presentation/parser.js"
+description = "Compile presentation"
 
-[concurrents.install]
-commands = [ "install_project", "install_slides" ]
-description = "Install dependencies"
+[commands.install]
+command = "npm install"
+description = "Install project dependencies and reveal.js dependencies"
+dependsOn = [ "install:reveal" ]
+
+[commands."install:reveal"]
+command = "npm install"
+cwd = "./submodules/reveal.js"
+description = "Install reveal.js dependencies"
+
+[commands."start:rollup"]
+command = "rollup -c rollup.config.js"
+binPath = "./node_modules/.bin"
+description = "Start rollup server and watch app/ directory"
+
+[commands."start:reveal"]
+command = "npm start -- --port=${port}"
+cwd = "./submodules/reveal.js"
+description = "Start reveal server"
+variables = { port = 8000 }
 
 [concurrents.start]
-commands = [ "slides --var.port=8000", "rollup -w" ]
-description = "Run rollup"
+commands = [ "start:reveal --var.port=8000", "start:rollup -w" ]
+description = "Run start:reveal and start:rollup concurrently"
