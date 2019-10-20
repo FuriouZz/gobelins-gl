@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "compile": "wk compile",
+    "setup": "wk install",
+    "presentation": "wk presentation",
     "start": "wk start"
   },
   "author": "Christophe MASSOLIN",
@@ -14,7 +17,9 @@
     "three": "^0.109.0"
   },
   "devDependencies": {
+    "chokidar": "^3.2.2",
     "front-matter": "^3.0.2",
+    "jsdom": "^15.2.0",
     "lodash.template": "^4.5.0",
     "rollup": "^1.23.1",
     "rollup-plugin-livereload": "^1.0.4",

@@ -1,28 +1,40 @@
-[commands.presentation]
-command = "node presentation/parser.js"
+[commands."compile:presentation"]
+command = "node presentation/src/parser.js --dir=presentation"
 description = "Compile presentation"
+visible = false
 
 [commands.install]
 command = "npm install"
-description = "Install project dependencies and reveal.js dependencies"
+description = "Install project dependencies"
 dependsOn = [ "install:reveal" ]
 
 [commands."install:reveal"]
 command = "npm install"
 cwd = "./submodules/reveal.js"
 description = "Install reveal.js dependencies"
+visible = false
 
-[commands."start:rollup"]
+[commands."compile:rollup"]
 command = "rollup -c rollup.config.js"
 binPath = "./node_modules/.bin"
 description = "Start rollup server and watch app/ directory"
+visible = false
 
 [commands."start:reveal"]
 command = "npm start -- --port=${port}"
 cwd = "./submodules/reveal.js"
 description = "Start reveal server"
-variables = { port = 8000 }
+variables = { port = "8000" }
+visible = false
+
+[concurrents.presentation]
+commands = [ "compile:presentation -w", "start:reveal" ]
+description = "Run presentation at http://localhost:8000"
+
+[concurrents.compile]
+commands = [ "compile:presentation", "compile:rollup" ]
+description = "Compile presentation and samples"
 
 [concurrents.start]
-commands = [ "start:reveal --var.port=8000", "start:rollup -w" ]
-description = "Run start:reveal and start:rollup concurrently"
+commands = [ "compile:rollup -w" ]
+description = "Run samples at http://localhost:3000"
