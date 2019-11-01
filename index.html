@@ -103,7 +103,7 @@
 </section>
 <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
   <script type="text/template">
-<!-- .slide: data-background-opacity="0.5" data-background="./assets/definitions/22.png" -->
+<!-- .slide: data-background-opacity="0.5" data-background="./img/definitions/22.png" -->
 
   ## Definitions
 
@@ -111,23 +111,23 @@
 
 --
 
-<!-- .slide: data-background="assets/rendered/scene0001.png" -->
+<!-- .slide: data-background="img/rendered/scene0001.png" -->
 
 --
 
-<!-- .slide: data-background="assets/rendered/scene0003.png" -->
+<!-- .slide: data-background="img/rendered/scene0003.png" -->
 
 --
 
-<!-- .slide: data-background="assets/rendered/vertex0003.png" -->
+<!-- .slide: data-background="img/rendered/vertex0003.png" -->
 
 --
 
-<!-- .slide: data-background="assets/rendered/cube_vertices0003.png" -->
+<!-- .slide: data-background="img/rendered/cube_vertices0003.png" -->
 
 --
 
-<!-- .slide: data-transition="fade" data-background-opacity="0.75" data-background="assets/rendered/cube_vertices0003.png" -->
+<!-- .slide: data-transition="fade" data-background-opacity="0.75" data-background="img/rendered/cube_vertices0003.png" -->
 
   ## Vertex
 
@@ -135,7 +135,7 @@
 
 --
 
-<!-- .slide: data-background-opacity="1" data-background="assets/rendered/cube_vertices0001.png" -->
+<!-- .slide: data-background-opacity="1" data-background="img/rendered/cube_vertices0001.png" -->
 
   #### Position <!-- .element: class="fragment fade-up" -->
 
@@ -151,7 +151,7 @@
 
 --
 
-<!-- .slide: data-background-opacity="1" data-background="assets/rendered/cube_vertices0001.png" -->
+<!-- .slide: data-background-opacity="1" data-background="img/rendered/cube_vertices0001.png" -->
 
   <pre>    <code class="javascript" data-trim="">/* Native WebGL */
 GL.drawElements(GL.POINTS, ...)
@@ -162,11 +162,11 @@ new Points(geometry, material)</code>
 
 --
 
-<!-- .slide: data-background="assets/rendered/edges0001.png" -->
+<!-- .slide: data-background="img/rendered/edges0001.png" -->
 
 --
 
-<!-- .slide: data-transition="fade" data-background-opacity="0.75" data-background="assets/rendered/cube_edges0003.png" -->
+<!-- .slide: data-transition="fade" data-background-opacity="0.75" data-background="img/rendered/cube_edges0003.png" -->
 
   ## Edge
 
@@ -176,9 +176,9 @@ new Points(geometry, material)</code>
 
 --
 
-<!-- .slide: data-background-opacity="1" data-background="assets/rendered/cube_edges0001.png" -->
+<!-- .slide: data-background-opacity="1" data-background="img/rendered/cube_edges0001.png" -->
 
-  ![](./assets/definitions/06.png)
+  ![](./img/definitions/06.png)
 
   <pre>    <code class="javascript" data-trim="">// Connect 2 by 2
 GL.drawElements(GL.LINES, ...)</code>
@@ -186,9 +186,9 @@ GL.drawElements(GL.LINES, ...)</code>
 
 --
 
-<!-- .slide: data-background-opacity="1" data-background="assets/rendered/cube_edges0001.png" -->
+<!-- .slide: data-background-opacity="1" data-background="img/rendered/cube_edges0001.png" -->
 
-  ![](./assets/definitions/07.png)
+  ![](./img/definitions/07.png)
 
   <pre>    <code class="javascript" data-trim="">// Connect all vertices (exclude first and last)
 GL.drawElements(GL.LINE_STRIP, ...)</code>
@@ -196,9 +196,9 @@ GL.drawElements(GL.LINE_STRIP, ...)</code>
 
 --
 
-<!-- .slide: data-background-opacity="1" data-background="assets/rendered/cube_edges0001.png" -->
+<!-- .slide: data-background-opacity="1" data-background="img/rendered/cube_edges0001.png" -->
 
-  ![](./assets/definitions/08.png)
+  ![](./img/definitions/08.png)
 
   <pre>    <code class="javascript" data-trim="">// Connect all vertices (include first and last)
 GL.drawElements(GL.LINE_LOOP, ...)</code>
@@ -206,9 +206,9 @@ GL.drawElements(GL.LINE_LOOP, ...)</code>
 
 --
 
-<!-- .slide: data-background-opacity="1" data-background="assets/rendered/cube_edges0001.png" -->
+<!-- .slide: data-background-opacity="1" data-background="img/rendered/cube_edges0001.png" -->
 
-  ![](./assets/definitions/06.png)
+  ![](./img/definitions/06.png)
 
   <pre>    <code class="javascript" data-trim="">// THREE
 const mesh = new Line(...)</code>
@@ -216,11 +216,11 @@ const mesh = new Line(...)</code>
 
 --
 
-<!-- .slide: data-background="assets/rendered/faces0001.png" -->
+<!-- .slide: data-background="img/rendered/faces0001.png" -->
 
 --
 
-<!-- .slide: data-transition="fade" data-background-opacity="0.75" data-background="assets/rendered/faces0001.png" -->
+<!-- .slide: data-transition="fade" data-background-opacity="0.75" data-background="img/rendered/faces0001.png" -->
 
   ## Face
 
@@ -230,9 +230,9 @@ const mesh = new Line(...)</code>
 
 --
 
-<!-- .slide: data-background-opacity="1" data-background="assets/rendered/cube_faces0001.png" -->
+<!-- .slide: data-background-opacity="1" data-background="img/rendered/cube_faces0001.png" -->
 
-  ![](./assets/definitions/09.png)
+  ![](./img/definitions/09.png)
 
   <pre>    <code>// Draw by ollowing vertex order
 GL.drawElements(GL.TRIANGLES, ...)</code>
@@ -240,9 +240,9 @@ GL.drawElements(GL.TRIANGLES, ...)</code>
 
 --
 
-<!-- .slide: data-background-opacity="1" data-background="assets/rendered/cube_faces0001.png" -->
+<!-- .slide: data-background-opacity="1" data-background="img/rendered/cube_faces0001.png" -->
 
-  ![](./assets/definitions/10.png)
+  ![](./img/definitions/10.png)
 
   <pre>    <code>// Draw by ollowing vertex order
 GL.drawElements(GL.TRIANGLE_STRIP, ...)</code>
@@ -250,9 +250,9 @@ GL.drawElements(GL.TRIANGLE_STRIP, ...)</code>
 
 --
 
-<!-- .slide: data-background-opacity="1" data-background="assets/rendered/cube_faces0001.png" -->
+<!-- .slide: data-background-opacity="1" data-background="img/rendered/cube_faces0001.png" -->
 
-  ![](./assets/definitions/11.png)
+  ![](./img/definitions/11.png)
 
   <pre>    <code>// Draw by ollowing vertex order
 GL.drawElements(GL.TRIANGLE_FAN, ...)</code>
@@ -260,9 +260,9 @@ GL.drawElements(GL.TRIANGLE_FAN, ...)</code>
 
 --
 
-<!-- .slide: data-background-opacity="1" data-background="assets/rendered/cube_faces0001.png" -->
+<!-- .slide: data-background-opacity="1" data-background="img/rendered/cube_faces0001.png" -->
 
-  ![](./assets/definitions/09.png)
+  ![](./img/definitions/09.png)
   <pre>    <code>/* THREE */
 const mesh = new Mesh(...)</code>
   </pre>
@@ -271,7 +271,7 @@ const mesh = new Mesh(...)</code>
 </section>
 <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
   <script type="text/template">
-<!-- .slide: data-background-opacity="0.5" data-background="./assets/definitions/23.png" -->
+<!-- .slide: data-background-opacity="0.5" data-background="./img/definitions/23.png" -->
 
   ## Definitions
 
@@ -279,31 +279,31 @@ const mesh = new Mesh(...)</code>
 
 --
 
-<!-- .slide: data-background-opacity="0.75" data-transition="fade" data-background="./assets/rendered/vertex0001.png" -->
+<!-- .slide: data-background-opacity="0.75" data-transition="fade" data-background="./img/rendered/vertex0001.png" -->
 
   Vertex Shader
 
 --
 
-<!-- .slide: data-background-opacity="0.75" data-transition="fade" data-background="./assets/rendered/faces0001.png" -->
+<!-- .slide: data-background-opacity="0.75" data-transition="fade" data-background="./img/rendered/faces0001.png" -->
 
   Geometry Shader
 
 --
 
-<!-- .slide: data-background-opacity="0.75" data-transition="fade" data-background="./assets/rendered/cube_color0001.png" -->
+<!-- .slide: data-background-opacity="0.75" data-transition="fade" data-background="./img/rendered/cube_color0001.png" -->
 
   Fragment Shader
 
 --
 
-<!-- .slide: data-background-opacity="0.5" data-background="./assets/rendered/scene0001.png" -->
+<!-- .slide: data-background-opacity="0.5" data-background="./img/rendered/scene0001.png" -->
 
-  ![](assets/definitions/20.png)
+  ![](img/definitions/20.png)
 
 --
 
-<!-- .slide: data-background-opacity="0.5" data-background="./assets/rendered/vertex0003.png" -->
+<!-- .slide: data-background-opacity="0.5" data-background="./img/rendered/vertex0003.png" -->
 
   ### Vertex shader
 
@@ -311,11 +311,11 @@ const mesh = new Mesh(...)</code>
 
 --
 
-<!-- .slide: data-background="./assets/rendered/vertex0003.png" -->
+<!-- .slide: data-background="./img/rendered/vertex0003.png" -->
 
 --
 
-<!-- .slide: data-background-opacity="0.5" data-transition="fade" data-background="./assets/rendered/vertex0003.png" -->
+<!-- .slide: data-background-opacity="0.5" data-transition="fade" data-background="./img/rendered/vertex0003.png" -->
 
   8 vertices
 
@@ -323,7 +323,7 @@ const mesh = new Mesh(...)</code>
 
 --
 
-<!-- .slide: data-background-opacity="0.5" data-background="./assets/rendered/cube_vertices0001.png" -->
+<!-- .slide: data-background-opacity="0.5" data-background="./img/rendered/cube_vertices0001.png" -->
 
   ## Role ?
 
@@ -335,7 +335,7 @@ const mesh = new Mesh(...)</code>
 
 --
 
-<!-- .slide: data-background-opacity="0.5" data-background="./assets/rendered/cube_faces0003.png" -->
+<!-- .slide: data-background-opacity="0.5" data-background="./img/rendered/cube_faces0003.png" -->
 
   ## Geometry shader
 
@@ -343,11 +343,11 @@ const mesh = new Mesh(...)</code>
 
 --
 
-<!-- .slide: data-background-opacity="1" data-background="./assets/rendered/cube_faces0003.png" -->
+<!-- .slide: data-background-opacity="1" data-background="./img/rendered/cube_faces0003.png" -->
 
 --
 
-<!-- .slide: data-background-opacity="0.5" data-background="./assets/rendered/cube_faces0003.png" -->
+<!-- .slide: data-background-opacity="0.5" data-background="./img/rendered/cube_faces0003.png" -->
 
   12 triangles
 
@@ -355,7 +355,7 @@ const mesh = new Mesh(...)</code>
 
 --
 
-<!-- .slide: data-background-opacity="0.5" data-background="./assets/rendered/cube_faces0001.png" -->
+<!-- .slide: data-background-opacity="0.5" data-background="./img/rendered/cube_faces0001.png" -->
 
   ## Role ?
 
@@ -365,13 +365,13 @@ const mesh = new Mesh(...)</code>
 
 --
 
-<!-- .slide: data-background-opacity="0.5" data-background="./assets/rendered/scene0001.png" -->
+<!-- .slide: data-background-opacity="0.5" data-background="./img/rendered/scene0001.png" -->
 
-  ![](assets/definitions/20.png)
+  ![](img/definitions/20.png)
 
 --
 
-<!-- .slide: data-background-opacity="0.5" data-background="./assets/rendered/cube_color0001.png" -->
+<!-- .slide: data-background-opacity="0.5" data-background="./img/rendered/cube_color0001.png" -->
 
   ## Fragment shader
 
@@ -379,7 +379,7 @@ const mesh = new Mesh(...)</code>
 
 --
 
-<!-- .slide: data-background-opacity="0.5" data-background="./assets/rendered/cube_color0001.png" -->
+<!-- .slide: data-background-opacity="0.5" data-background="./img/rendered/cube_color0001.png" -->
 
   ## What is a fragment?
 
@@ -387,21 +387,21 @@ const mesh = new Mesh(...)</code>
 
 --
 
-<!-- .slide: data-background="./assets/rendered/vertex_color0001.png" -->
+<!-- .slide: data-background="./img/rendered/vertex_color0001.png" -->
 
 --
 
-<!-- .slide: data-background-opacity="0.5" data-transition="fade" data-background="./assets/rendered/vertex_color0001.png" -->
+<!-- .slide: data-background-opacity="0.5" data-transition="fade" data-background="./img/rendered/vertex_color0001.png" -->
 
-  ![](assets/definitions/20.png)
-
---
-
-<!-- .slide: data-background="./assets/rendered/cube_color0001.png" -->
+  ![](img/definitions/20.png)
 
 --
 
-<!-- .slide: data-background-opacity="0.5" data-background="./assets/rendered/cube_color0003.png" -->
+<!-- .slide: data-background="./img/rendered/cube_color0001.png" -->
+
+--
+
+<!-- .slide: data-background-opacity="0.5" data-background="./img/rendered/cube_color0003.png" -->
 
   ### How many operations?
 
@@ -409,11 +409,11 @@ const mesh = new Mesh(...)</code>
 
 --
 
-<!-- .slide: data-background="./assets/definitions/21.png" -->
+<!-- .slide: data-background="./img/definitions/21.png" -->
 
 --
 
-<!-- .slide: data-background-opacity="0.5" data-transition="fade" data-background="./assets/definitions/21.png" -->
+<!-- .slide: data-background-opacity="0.5" data-transition="fade" data-background="./img/definitions/21.png" -->
 
   For a résolution of 1920x1080
 
@@ -423,33 +423,33 @@ const mesh = new Mesh(...)</code>
 </section>
 <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
   <script type="text/template">
-<!-- .slide: data-background-opacity="0.5" data-background="./assets/definitions/24.png" -->
+<!-- .slide: data-background-opacity="0.5" data-background="./img/definitions/24.png" -->
 
   ## Take a break?
 
 --
 
-<!-- .slide: data-background-opacity="0.5" data-background="./assets/rendered/geometry0001.png" data-transition="fade" -->
+<!-- .slide: data-background-opacity="0.5" data-background="./img/rendered/geometry0001.png" data-transition="fade" -->
 
   ## Geometry
 
 --
 
-<!-- .slide: data-background="./assets/rendered/plane0003.png" data-transition="fade" -->
+<!-- .slide: data-background="./img/rendered/plane0003.png" data-transition="fade" -->
 
 --
 
-<!-- .slide: data-background-opacity="0.5" data-background="./assets/rendered/material0001.png" data-transition="fade" -->
+<!-- .slide: data-background-opacity="0.5" data-background="./img/rendered/material0001.png" data-transition="fade" -->
 
   ## Material
 
 --
 
-<!-- .slide: data-background="./assets/rendered/plane0003.png" data-transition="fade" -->
+<!-- .slide: data-background="./img/rendered/plane0003.png" data-transition="fade" -->
 
 --
 
-<!-- .slide: data-background-opacity="0.5" data-background="./assets/rendered/plane0003.png" data-transition="fade" -->
+<!-- .slide: data-background-opacity="0.5" data-background="./img/rendered/plane0003.png" data-transition="fade" -->
 
   #### Geometry <!-- .element: class="fragment fade-up" -->
 
@@ -463,43 +463,43 @@ const mesh = new Mesh(...)</code>
 
 --
 
-<!-- .slide: data-background="./assets/rendered/mesh0003.png" data-transition="fade" -->
+<!-- .slide: data-background="./img/rendered/mesh0003.png" data-transition="fade" -->
 
 --
 
-<!-- .slide: data-background-opacity="0.5" data-background="./assets/rendered/materials0001.png" data-transition="fade" -->
+<!-- .slide: data-background-opacity="0.5" data-background="./img/rendered/materials0001.png" data-transition="fade" -->
 
   ## Some materials?
 
 --
 
-<!-- .slide: data-background-opacity="0.5" data-background="./assets/rendered/geometry0001.png" data-transition="fade" -->
+<!-- .slide: data-background-opacity="0.5" data-background="./img/rendered/geometry0001.png" data-transition="fade" -->
 
   ## One geometry?
 
 --
 
-<!-- .slide: data-background="./assets/rendered/meshes_materials0003.png" data-transition="fade" -->
+<!-- .slide: data-background="./img/rendered/meshes_materials0003.png" data-transition="fade" -->
 
 --
 
-<!-- .slide: data-background-opacity="0.5" data-background="./assets/rendered/geometry0001.png" data-transition="fade" -->
+<!-- .slide: data-background-opacity="0.5" data-background="./img/rendered/geometry0001.png" data-transition="fade" -->
 
   ## One geometry?
 
 --
 
-<!-- .slide: data-background-opacity="0.5" data-background="./assets/rendered/materials0001.png" data-transition="fade" -->
+<!-- .slide: data-background-opacity="0.5" data-background="./img/rendered/materials0001.png" data-transition="fade" -->
 
   ## With multiple materials?
 
 --
 
-<!-- .slide: data-background="./assets/rendered/mesh_materials0003.png" data-transition="fade" -->
+<!-- .slide: data-background="./img/rendered/mesh_materials0003.png" data-transition="fade" -->
 
 --
 
-<!-- .slide: data-background-opacity="0.5" data-transition="fade" data-background="./assets/rendered/mesh_materials0003.png" -->
+<!-- .slide: data-background-opacity="0.5" data-transition="fade" data-background="./img/rendered/mesh_materials0003.png" -->
 
   ###### Geometry
 
@@ -511,7 +511,7 @@ const mesh = new Mesh(...)</code>
 </section>
 <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
   <script type="text/template">
-<!-- .slide: data-background-opacity="0.5" data-background="./assets/definitions/16.png" -->
+<!-- .slide: data-background-opacity="0.5" data-background="./img/definitions/16.png" -->
 
   ## Definitions
 
@@ -519,7 +519,7 @@ const mesh = new Mesh(...)</code>
 
 --
 
-<!-- .slide: data-background-opacity="0.5" data-background="./assets/definitions/16.png" -->
+<!-- .slide: data-background-opacity="0.5" data-background="./img/definitions/16.png" -->
 
 ### Image
 
@@ -529,7 +529,7 @@ const mesh = new Mesh(...)</code>
 
 --
 
-<!-- .slide: data-background-opacity="0.5" data-background="./assets/definitions/16.png" -->
+<!-- .slide: data-background-opacity="0.5" data-background="./img/definitions/16.png" -->
 
 ### Video
 
@@ -537,7 +537,7 @@ const mesh = new Mesh(...)</code>
 
 --
 
-<!-- .slide: data-background-opacity="0.5" data-background="./assets/definitions/16.png" -->
+<!-- .slide: data-background-opacity="0.5" data-background="./img/definitions/16.png" -->
 
 ### Canvas
 
@@ -547,7 +547,7 @@ const mesh = new Mesh(...)</code>
 
 --
 
-<!-- .slide: data-background-opacity="0.75" data-background-video="./assets/rendered/rtt.mp4" data-background-video-loop="true" data-background-video-muted="true" -->
+<!-- .slide: data-background-opacity="0.75" data-background-video="./img/rendered/rtt.mp4" data-background-video-loop="true" data-background-video-muted="true" -->
 
 ### FrameBuffer
 
