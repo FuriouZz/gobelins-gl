@@ -1,9 +1,17 @@
-<slide main data-background>
-  # La 3D temps réel
+<slide main>
+  # WebGL
 </slide>
 
 <slide main>
-  # Temps réel vs pré-calculé
+  ## Qu'est-ce que le WebGL ?
+</slide>
+
+<slide>
+  ### API Javascript dédié à l'affichage de contenu 2D et 3D sur le web
+</slide>
+
+<slide>
+  ### API Javascript dédié à l'affichage de contenu 2D et 3D sur le web
 </slide>
 
 <slide main>

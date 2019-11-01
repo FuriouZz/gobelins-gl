@@ -73,10 +73,10 @@ async function parseSlides(path) {
           header = '\n---\n\n'
         }
       }
-      header += `<!-- .slide: ${headers.join(' ')} -->\n`
+      header += `\n<!-- .slide: ${headers.join(' ')} -->\n`
     }
 
-    slides.push(`${header}${$slide.textContent}`)
+    slides.push(`${header}${$slide.innerHTML}`)
   }
 
   return `<section data-markdown data-separator="^\\n---\\n$" data-separator-vertical="^\\n--\\n$">
