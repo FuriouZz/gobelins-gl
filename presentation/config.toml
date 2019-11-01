@@ -50,7 +50,7 @@ loop = false
 rtl = false
 
 # See https://github.com/hakimel/reveal.js/#navigation-mode
-navigationMode = 'default'
+navigationMode = 'linear'
 
 # Randomizes the order of slides each time the presentation loads
 shuffle = false
@@ -103,7 +103,7 @@ autoSlideMethod = "@Reveal.navigateNext"
 defaultTiming = 120
 
 # Enable slide navigation via mouse wheel
-mouseWheel = false
+mouseWheel = true
 
 # Hide cursor if inactive
 hideInactiveCursor = true
@@ -151,5 +151,6 @@ dependencies = [
   { src = 'plugin/markdown/marked.js' },
   { src = 'plugin/markdown/markdown.js' },
   { src = 'plugin/notes/notes.js', async = true },
-  { src = 'plugin/highlight/highlight.js', async = true }
+  { src = 'plugin/highlight/highlight.js', async = true },
+  { src = 'plugin/zoom-js/zoom.js', async = true }
 ]

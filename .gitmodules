@@ -1,3 +1,4 @@
 [submodule "submodules/reveal.js"]
 	path = submodules/reveal.js
-	url = git@github.com:FuriouZz/reveal.js.git
+	url = git@github.com:FuriouZz/gobelins-gl-presentation.git
+	branch = "gh-page"

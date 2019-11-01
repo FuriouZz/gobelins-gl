@@ -10,10 +10,6 @@
   ### API Javascript dédié à l'affichage de contenu 2D et 3D sur le web
 </slide>
 
-<slide>
-  ### API Javascript dédié à l'affichage de contenu 2D et 3D sur le web
-</slide>
-
 <slide main>
   # Les spécificités du temps réel
 </slide>
