@@ -26,6 +26,7 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-serve": "^1.0.1",
     "toml": "^3.0.0",
+    "asset-pipeline": "github:wk-js/asset-pipeline#2.0.5",
     "wk": "github:wk-js/command"
   }
 }

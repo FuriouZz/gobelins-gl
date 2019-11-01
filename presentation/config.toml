@@ -1,7 +1,7 @@
 [config]
 main = "main.md"
 input = "src/index.html.ejs"
-output = "../submodules/reveal.js/index.html"
+output = "../submodules/presentation/index.html"
 
 [reveal]
 # Display presentation control arrows

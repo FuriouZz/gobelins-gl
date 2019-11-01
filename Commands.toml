@@ -10,7 +10,7 @@ dependsOn = [ "install:reveal" ]
 
 [commands."install:reveal"]
 command = "npm install"
-cwd = "./submodules/reveal.js"
+cwd = "./submodules/presentation"
 description = "Install reveal.js dependencies"
 visible = false
 
@@ -22,7 +22,7 @@ visible = false
 
 [commands."start:reveal"]
 command = "npm start -- --port=${port}"
-cwd = "./submodules/reveal.js"
+cwd = "./submodules/presentation"
 description = "Start reveal server"
 variables = { port = "8000" }
 visible = false
@@ -32,7 +32,7 @@ commands = [ "compile:presentation -w", "start:reveal" ]
 description = "Run presentation at http://localhost:8000"
 
 [concurrents.compile]
-commands = [ "compile:presentation", "compile:rollup" ]
+commands = [ "compile:presentation -c", "compile:rollup" ]
 description = "Compile presentation and samples"
 
 [concurrents.start]

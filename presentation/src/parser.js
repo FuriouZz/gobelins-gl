@@ -6,6 +6,7 @@ const Path = require('path')
 const chokidar = require('chokidar')
 const { JSDOM } = require("jsdom")
 const ARGV = require('lol/dist/cjs/object/argv')
+const { Pipeline } = require('asset-pipeline/js/pipeline')
 
 async function parseConfig(argv) {
   const content = await readFile(Path.join(argv.dir, 'config.toml'), 'utf-8')
@@ -92,17 +93,55 @@ async function compile(argv) {
     slides,
     revealConfig
   })
+  index = index.replace(/assets\//g, 'img/')
   await writeFile(index, config.output)
   console.log(`[Slides] Compiled into ${config.output}`)
 }
 
+async function pipeline() {
+  const p = new Pipeline()
+  p.source.add('./presentation/slides')
+  p.resolve.output('submodules/presentation')
+  p.directory.add('assets', {
+    output: 'img',
+    file_rules: [
+      {
+        glob: "assets/*",
+        ignore: true
+      },
+      {
+        glob: "assets/{rendered,definitions}/*"
+      }
+    ]
+  })
+
+  p.fs.copy('assets/rendered/*')
+  p.fs.copy('assets/definitions/*')
+
+  return {
+    p,
+    async apply() {
+      console.log(`[Slides] Fetch assets`);
+      await p.fetch()
+      console.log(`[Slides] Copy assets`);
+      await p.fs.apply()
+    }
+  }
+}
+
 async function main(argv) {
+  const { p, apply } = await pipeline()
+
   await compile(argv)
+
+  if (argv.copy || argv.c) {
+    await apply()
+  }
 
   if (argv.watch || argv.w) {
     console.log(`[Slides] Start watching ${Path.join(argv.dir, '**/*.md')}`);
     chokidar.watch(Path.join(argv.dir, '**/*.md')).on('change', () => {
-      compile(argv)
+      compile(argv, p)
     })
   }
 }
