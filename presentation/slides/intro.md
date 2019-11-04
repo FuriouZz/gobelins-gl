@@ -1,6 +1,5 @@
 <slide main>
-  # WebGL
-  #### 3D realtime on the Web
+  # WebGL introduction
 </slide>
 
 <slide main>

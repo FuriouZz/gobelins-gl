@@ -67,3 +67,13 @@ Code snippets to export extra datas <!-- .element: class="fragment fade-up" -->
 
 Organise your soft with custom layouts <!-- .element: class="fragment fade-up" -->
 </slide>
+
+<slide>
+### Debug
+
+Color is data <!-- .element: class="fragment fade-up" -->
+
+Comment/uncomment step-by-step <!-- .element: class="fragment fade-up" -->
+
+Use tool like dat.gui <!-- .element: class="fragment fade-up" -->
+</slide>

@@ -1,10 +1,10 @@
-<slide data-background-opacity="0.5" data-background="./assets/definitions/16.png">
+<slide data-background-opacity="0.5" data-background="./assets/definitions/25.png">
   ## Definitions
 
   Texture
 </slide>
 
-<slide data-background-opacity="0.5" data-background="./assets/definitions/16.png">
+<slide data-background-opacity="0.5" data-background="./assets/definitions/17.png">
 ### Image
 
 **JPG/PNG/WEBP/etc...** <!-- .element: class="fragment fade-up" -->
@@ -12,7 +12,7 @@
 **Compressed (DDS/PVR/KTX)** <!-- .element: class="fragment fade-up" -->
 </slide>
 
-<slide data-background-opacity="0.5" data-background="./assets/definitions/16.png">
+<slide data-background-opacity="0.5" data-background-video="./assets/rendered/bunny.mp4" data-background-video-loop="true" data-background-video-muted="true">
 ### Video
 
 **MP4/WEBM/etc...** <!-- .element: class="fragment fade-up" -->
