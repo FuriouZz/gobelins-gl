@@ -20,18 +20,6 @@
   Uniforms <!-- .element: class="fragment fade-up" -->
 </slide>
 
-<slide data-transition="fade">
-  ## +
-</slide>
-
-<slide data-background-opacity="0.5" data-background="./assets/rendered/material0001.png" data-transition="fade">
-  ## Material
-</slide>
-
-<slide data-background="./assets/rendered/mesh0003.png" data-transition="fade">
-  # Mesh <!-- .element: class="fragment fade-out" -->
-</slide>
-
 <slide data-background-opacity="0.5" data-transition="fade">
   ###### Geometry and material
 
@@ -57,3 +45,27 @@
 </slide>
 
 <slide data-background="./assets/rendered/mesh_materials0003.png" data-transition="fade"></slide>
+
+<slide data-background-opacity="0.5" data-background="./assets/rendered/geometry0001.png" data-transition="fade">
+  ## Geometry
+</slide>
+
+<slide data-transition="fade">
+  ## +
+</slide>
+
+<slide data-background-opacity="0.5" data-background="./assets/rendered/material0001.png" data-transition="fade">
+  ## Material
+</slide>
+
+<slide data-background="./assets/rendered/mesh_materials0003.png" data-transition="fade">
+  # Mesh <!-- .element: class="fragment fade-out" -->
+</slide>
+
+<slide data-background="./assets/rendered/mesh_materials0003.png" data-transition="fade">
+  # Mesh (Object3D)
+
+  Geometry + Material <!-- .element: class="fragment fade-out" -->
+
+  Transform <!-- .element: class="fragment fade-out" -->
+</slide>
