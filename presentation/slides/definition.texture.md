@@ -44,7 +44,7 @@ You need texture coordinates to use textures
 They are an attribute of the vertex <!-- .element: class="fragment fade-up" -->
 </slide>
 
-<slide>
+<slide data-background-opacity="0.5" data-background-video="./assets/rendered/uv.mp4" data-background-video-loop="true" data-background-video-muted="true">
 It exists very useful tool to create<br>or generate your UVs easily:
 
 Blender <!-- .element: class="fragment fade-up" -->

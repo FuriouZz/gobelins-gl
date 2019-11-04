@@ -54,6 +54,8 @@ https://www.gdcvault.com/ <!-- .element: class="fragment fade-up" -->
 https://mattdesl.svbtle.com/ <!-- .element: class="fragment fade-up" -->
 
 https://mattdesl.github.io/workshop-webgl-glsl/#/ <!-- .element: class="fragment fade-up" -->
+
+http://three-demos.glitch.me/ <!-- .element: class="fragment fade-up" -->
 </slide>
 
 <slide>
