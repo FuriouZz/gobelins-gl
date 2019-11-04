@@ -33,21 +33,19 @@
 </slide>
 
 <slide>
-How to use texture?
+You need texture coordinates to use textures
+
+<span>They are also called </span> <!-- .element: class="fragment fade-up" -->
+
+<span>**UV** for 2D coordinates </span> <!-- .element: class="fragment fade-up" -->
+
+<span>**UVW** for 3D coordinates</span> <!-- .element: class="fragment fade-up" -->
+
+They are an attribute of the vertex <!-- .element: class="fragment fade-up" -->
 </slide>
 
 <slide>
-Need texture coordinates
-
-<span>Commonly called **UV**</span> <!-- .element: class="fragment fade-up" -->
-</slide>
-
-<slide>
-UV is an attribute of the vertex
-</slide>
-
-<slide>
-To create UV, you need a specific tool
+It exists very useful tool to create<br>or generate your UVs easily:
 
 Blender <!-- .element: class="fragment fade-up" -->
 

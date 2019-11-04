@@ -50,7 +50,7 @@ loop = false
 rtl = false
 
 # See https://github.com/hakimel/reveal.js/#navigation-mode
-navigationMode = 'linear'
+navigationMode = 'default'
 
 # Randomizes the order of slides each time the presentation loads
 shuffle = false

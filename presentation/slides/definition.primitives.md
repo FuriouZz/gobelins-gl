@@ -21,7 +21,7 @@
 <slide data-background-opacity="1" data-background="assets/rendered/cube_vertices0001.png">
   #### Position <!-- .element: class="fragment fade-up" -->
 
-  #### Coordonnées de texture (UV) <!-- .element: class="fragment fade-up" -->
+  #### Texture coordinate (UV) <!-- .element: class="fragment fade-up" -->
 
   #### Normal <!-- .element: class="fragment fade-up" -->
 

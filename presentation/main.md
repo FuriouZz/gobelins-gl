@@ -3,4 +3,5 @@
 <import name="slides/definition.shader.md" />
 <import name="slides/definition.geometry-material-mesh.md" />
 <import name="slides/definition.texture.md" />
+<import name="slides/pipeline.md" />
 <import name="slides/one-more-things.md" />

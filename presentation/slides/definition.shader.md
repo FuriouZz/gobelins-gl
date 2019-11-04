@@ -4,7 +4,7 @@
   Shader
 </slide>
 
-<slide data-background-opacity="0.75" data-transition="fade" data-background="./assets/rendered/vertex0001.png">
+<slide data-background-opacity="0.75" data-transition="fade" data-background="./assets/rendered/vertex0003.png">
   Vertex Shader
 </slide>
 
@@ -12,7 +12,7 @@
   Geometry Shader
 </slide>
 
-<slide data-background-opacity="0.75" data-transition="fade" data-background="./assets/rendered/cube_color0001.png">
+<slide data-background-opacity="0.75" data-transition="fade" data-background="./assets/rendered/cube_color0001_pixelated.png">
   Fragment Shader
 </slide>
 
@@ -70,13 +70,13 @@
   ![](assets/definitions/20.png)
 </slide>
 
-<slide data-background-opacity="0.5" data-background="./assets/rendered/cube_color0001.png">
+<slide data-background-opacity="0.5" data-background="./assets/rendered/cube_color0001_pixelated.png">
   ## Fragment shader
 
   Executed by fragment <!-- .element: class="fragment fade-up" -->
 </slide>
 
-<slide data-background-opacity="0.5" data-background="./assets/rendered/cube_color0001.png">
+<slide data-background-opacity="0.5" data-background="./assets/rendered/cube_color0001_pixelated.png">
   ## What is a fragment?
 
   Come back to our cube... <!-- .element: class="fragment fade-up" -->
@@ -89,6 +89,8 @@
 </slide>
 
 <!-- <slide data-background="./assets/rendered/vertex_color_cube0001.png"></slide> -->
+
+<slide data-background="./assets/rendered/cube_color0001_pixelated.png"></slide>
 
 <slide data-background="./assets/rendered/cube_color0001.png"></slide>
 

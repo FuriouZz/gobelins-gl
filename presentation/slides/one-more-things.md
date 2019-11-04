@@ -1,5 +1,11 @@
 <slide>
-### So many domains to learn
+Ok. This is huge.
+
+There is so many...
+</slide>
+
+<slide>
+### ...domains to explore
 
 Animation <!-- .element: class="fragment fade-up" -->
 
@@ -15,7 +21,7 @@ VFX <!-- .element: class="fragment fade-up" -->
 </slide>
 
 <slide>
-### So many tools to masterize
+### ...tools to masterize
 
 Blender <!-- .element: class="fragment fade-up" -->
 
@@ -27,7 +33,7 @@ Houdini <!-- .element: class="fragment fade-up" -->
 </slide>
 
 <slide>
-### So many renderers to try
+### ...renderers to try
 
 Blender Eevee/Cycle <!-- .element: class="fragment fade-up" -->
 
@@ -37,7 +43,7 @@ Redshift <!-- .element: class="fragment fade-up" -->
 </slide>
 
 <slide>
-### So many resources
+### ...resources to read
 
 https://threejs.org/examples/ <!-- .element: class="fragment fade-up" -->
 
@@ -46,14 +52,14 @@ https://thebookofshaders.com/?lan=fr <!-- .element: class="fragment fade-up" -->
 https://www.gdcvault.com/ <!-- .element: class="fragment fade-up" -->
 
 https://mattdesl.svbtle.com/ <!-- .element: class="fragment fade-up" -->
+
+https://mattdesl.github.io/workshop-webgl-glsl/#/ <!-- .element: class="fragment fade-up" -->
 </slide>
 
 <slide>
-Welcome to the world of the 3D
-</slide>
+### Welcome to the 3D world <!-- .element: class="fragment fade-up" -->
 
-<slide>
-Christophe MASSOLIN
+<span>Christophe MASSOLIN ~ [@furiouzz](https://twitter.com/furiouzz)</span>  <!-- .element: class="fragment fade-up" -->
 
-[@furiouzz](https://twitter.com/furiouzz) <!-- .element: class="fragment fade-up" -->
+<span>Work at [@makemepulse](https://twitter.com/makemepulse)</span> <!-- .element: class="fragment fade-up" -->
 </slide>

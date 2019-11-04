@@ -1,62 +1,44 @@
 <slide main>
   # WebGL
+  #### Realtime on the Web
 </slide>
 
 <slide main>
-  ## Qu'est-ce que le WebGL ?
+  ## What is WebGL?
+
+  A Javascript API dedicated to render 2D and 3D content on the web <!-- .element: class="fragment fade-up" -->
 </slide>
 
 <slide>
-  ### API Javascript dédié à l'affichage de contenu 2D et 3D sur le web
-</slide>
+  ### What is realtime?
 
-<slide main>
-  # Les spécificités du temps réel
-</slide>
+  Interactive <!-- .element: class="fragment fade-up" -->
 
-<slide>
-  ## Interactive
-</slide>
+  Generative <!-- .element: class="fragment fade-up" -->
 
-<slide>
-  ## Generative
+  Scalable <!-- .element: class="fragment fade-up" -->
 </slide>
 
 <slide>
-  ## Immersive
+  ### Difference with precomputed?
+
+  Each draw must be very fast <!-- .element: class="fragment fade-up" -->
+
+  Each draw has a performance cost <!-- .element: class="fragment fade-up" -->
+
+  Momentum performance-quality <!-- .element: class="fragment fade-up" -->
+
+  Everything is time-based <!-- .element: class="fragment fade-up" -->
 </slide>
 
 <slide>
-  ## Scalable
-</slide>
+  ### Mix realtime and precomputed
 
-<slide main>
-  ## Les principes du temps réel
-</slide>
+  Use textures <!-- .element: class="fragment fade-up" -->
 
-<slide>
-  ## Le bon équilibre performance-qualité
-</slide>
+  Export models and datas <!-- .element: class="fragment fade-up" -->
 
-<slide>
-  ## Time-based plutôt que frame-based
-</slide>
+  Do not draw/update the invisibles <!-- .element: class="fragment fade-up" -->
 
-<slide>
-  ## Reduire le nombre "draw call"
-</slide>
-
-<slide>
-  ## Isoler le code gourmand hors de la boucle de rendu
-</slide>
-
-<slide>
-  * Création d'object
-  * Mise à jour des vertex
-</slide>
-
-<slide>
-  Utiliser des assets précalculés
-  * Bake de texture
-  * Texture tricks
+  Limit expensive operation <!-- .element: class="fragment fade-up" -->
 </slide>
