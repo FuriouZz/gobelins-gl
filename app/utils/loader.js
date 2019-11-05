@@ -92,7 +92,6 @@ export function parseShader(content) {
         interpolate: /{{([\s\S]+?)}}/g,
         evaluate: /{%([\s\S]+?)%}/g,
         escape: /{#([\s\S]+?)#}/g,
-        // imports: ShaderImports
       })(params).trim()
       return t
     }

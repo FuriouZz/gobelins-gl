@@ -9,15 +9,15 @@ const plugins = []
 if (argv.w || argv.watch) {
   plugins.push(
     serve({
-      contentBase: [ 'public' ],
+      contentBase: [ 'public', 'app/assets' ],
       port: 3000
     }),
 
-    livereload({
-      watch: "public/**/*",
-      verbose: true,
-      port: 35730
-    })
+    // livereload({
+    //   watch: "app/**/*",
+    //   verbose: true,
+    //   port: 35730
+    // })
   )
 }
 

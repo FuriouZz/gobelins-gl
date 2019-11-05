@@ -1,4 +1,4 @@
-import { Framework } from './framework';
+import { Framework } from '../framework';
 import { PerspectiveCamera, Scene, SphereBufferGeometry, MeshBasicMaterial, Mesh, WebGLRenderer } from 'three';
 
 class Main {
