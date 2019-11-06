@@ -13,11 +13,11 @@ if (argv.w || argv.watch) {
       port: 3000
     }),
 
-    // livereload({
-    //   watch: "app/**/*",
-    //   verbose: true,
-    //   port: 35730
-    // })
+    livereload({
+      watch: "app/**/*",
+      verbose: true,
+      port: 35730
+    })
   )
 }
 

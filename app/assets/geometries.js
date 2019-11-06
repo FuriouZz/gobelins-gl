@@ -1,10 +1,10 @@
-import { BufferGeometry, BufferAttribute } from "three"
+import { BufferGeometry, BufferAttribute, BoxBufferGeometry } from "three"
 import { Cache } from "../utils/cache"
 
 const C = new Cache
 
-export function PlaneGeometry() {
-  return C.fetch('plane', () => {
+export function WaveGeometry() {
+  return C.fetch('wave', () => {
     const geometry = new BufferGeometry()
 
     const positions = new Float32Array([
@@ -33,5 +33,11 @@ export function PlaneGeometry() {
     geometry.addAttribute('uv', new BufferAttribute(texcoords, 2))
 
     return geometry
+  })
+}
+
+export function CubeGeometry() {
+  return C.fetch('cube', async () => {
+    return new BoxBufferGeometry()
   })
 }

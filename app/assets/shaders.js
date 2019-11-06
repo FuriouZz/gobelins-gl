@@ -1,7 +1,13 @@
 import { Cache } from "../utils/cache";
 import { shader } from "../utils/loader";
+import { Color } from "../utils/color";
 
 const C = new Cache()
+
+const ShaderImports = {
+  include: get_shader,
+  hex(str) { return Color.to_vec3_glsl(Color.from_hex(str)) }
+}
 
 export function load_shader(url) {
   return C.fetch(url, async () => {
@@ -19,9 +25,7 @@ export function load_shader(url) {
 
     return {
       get(section = 'name', params = {}) {
-        return s.get(section, Object.assign(params, {
-          include: get_shader
-        }))
+        return s.get(section, Object.assign(params, ShaderImports))
       }
     }
   })

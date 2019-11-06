@@ -12,6 +12,7 @@
   "author": "Christophe MASSOLIN",
   "license": "ISC",
   "dependencies": {
+    "dat.gui": "^0.7.6",
     "lodash-es": "^4.17.15",
     "lol": "github:wk-js/lol.js#448f212c3862e5499aacba26d0ef5b167cc1f2f8",
     "three": "^0.109.0"

@@ -32,7 +32,10 @@ class $Framework {
     if (typeof options.onStart  == 'function') this.start .on(options.onStart)
     if (typeof options.onUpdate == 'function') this.update.on(options.onUpdate)
     if (typeof options.onRender == 'function') this.render.on(options.onRender)
-    if (typeof options.onResize == 'function') this.resize.on(options.onResize)
+    if (typeof options.onResize == 'function') {
+      this.resize.on(options.onResize)
+      options.onResize()
+    }
     return this
   }
 
