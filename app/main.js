@@ -2,15 +2,14 @@ import { Framework } from "./framework"
 import { Scene, WebGLRenderer, PerspectiveCamera, Light, PointLight, WebGLRenderTarget, RGBAFormat, OrthographicCamera } from "three"
 import { Wave } from "./entities/wave"
 import { load_shader } from "./assets/shaders"
-import { GUI } from "./gui"
 import { Cube } from "./entities/cube"
 import { Mirror } from "./entities/mirror"
+import { bind } from 'lol/dist/esm/function'
 
 class Main {
 
   constructor() {
-    this.onResize = this.onResize.bind(this)
-    this.onRender = this.onRender.bind(this)
+    bind(this, 'onRender', 'onResize', 'onDebug')
 
     const canvas = document.querySelector('#webgl')
     this.renderer = new WebGLRenderer({ canvas, antialias: true })
@@ -23,12 +22,14 @@ class Main {
     this.rttCamera = this.camera.clone()
     this.target = new WebGLRenderTarget(Framework.width, Framework.height)
 
-    this.init()
+    this.controller = {
+      bgcolor: 0xa111b,
+      renderToTexture: true
+    }
 
-    Framework.configure(this).play()
-
-    GUI.addColor({ bgcolor: 0xa111b }, 'bgcolor').onChange((v) => {
-      this.renderer.setClearColor(v)
+    this.init().then(() => {
+      Framework.debugEnabled = true
+      Framework.configure(this).play()
     })
   }
 
@@ -51,6 +52,16 @@ class Main {
     this.rttScene.add(wave.mesh)
   }
 
+  /**
+   * @param {dat.GUI} GUI
+   */
+  onDebug(GUI) {
+    GUI.addColor(this.controller, 'bgcolor').onChange((v) => {
+      this.renderer.setClearColor(v)
+    })
+    GUI.add(this.controller, 'renderToTexture')
+  }
+
   onResize() {
     this.renderer.setSize(Framework.width, Framework.height, true)
     this.target.setSize(Framework.width, Framework.height)
@@ -61,10 +72,14 @@ class Main {
   }
 
   onRender() {
-    this.renderer.setRenderTarget(this.target)
-    this.renderer.render(this.rttScene, this.rttCamera)
-    this.renderer.setRenderTarget(null)
-    this.renderer.render(this.scene, this.camera)
+    if (this.controller.renderToTexture) {
+      this.renderer.setRenderTarget(this.target)
+      this.renderer.render(this.rttScene, this.rttCamera)
+      this.renderer.setRenderTarget(null)
+      this.renderer.render(this.scene, this.camera)
+    } else {
+      this.renderer.render(this.rttScene, this.rttCamera)
+    }
   }
 
   static main() {

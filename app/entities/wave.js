@@ -3,13 +3,12 @@ import { WaveGeometry } from "../assets/geometries";
 import { WaveMaterial } from "../assets/materials";
 import { Framework } from "../framework";
 import { texture } from "../utils/loader";
-import { GUI } from "../gui";
+import { bind } from "lol/dist/esm/function";
 
 export class Wave {
 
   constructor({ geometry, material, textures }) {
-    this.onUpdate = this.onUpdate.bind(this)
-    this.onResize = this.onResize.bind(this)
+    bind(this, 'onResize', 'onUpdate')
 
     this.geometry = geometry
     this.material = material
@@ -22,7 +21,13 @@ export class Wave {
     this.mesh = new Mesh(this.geometry, this.material)
 
     Framework.configure(this)
+  }
 
+  /**
+   *
+   * @param {dat.GUI} GUI
+   */
+  onDebug(GUI) {
     GUI.addColor({ color: 0x2d9d9d }, 'color').onChange((v) => {
       this.color.setHex(v)
     })

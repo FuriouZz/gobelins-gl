@@ -14,7 +14,7 @@ if (argv.w || argv.watch) {
     }),
 
     livereload({
-      watch: "app/**/*",
+      watch: [ "public", "app/assets/**/*" ],
       verbose: true,
       port: 35730
     })

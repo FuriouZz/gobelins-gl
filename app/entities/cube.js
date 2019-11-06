@@ -2,13 +2,12 @@ import { CubeGeometry } from "../assets/geometries";
 import { CubeMaterial } from "../assets/materials";
 import { Mesh, Color } from "three";
 import { Framework } from "../framework";
-import { GUI } from "../gui";
+import { bind } from "lol/dist/esm/function";
 
 export class Cube {
 
   constructor({ geometry, material }) {
-    this.onUpdate = this.onUpdate.bind(this)
-    this.onResize = this.onResize.bind(this)
+    bind(this, 'onDebug', 'onUpdate')
 
     this.geometry = geometry
     this.material = material
@@ -20,13 +19,17 @@ export class Cube {
     this.mesh.scale.set(0.25, 0.25, 0.25)
 
     Framework.configure(this)
+  }
 
+  /**
+   * @param {dat.GUI} GUI
+   * @memberof Cube
+   */
+  onDebug(GUI) {
     GUI.addColor({ cubecolor: 0xb644a2 }, 'cubecolor').onChange((v) => {
       this.color.setHex(v)
     })
   }
-
-  onResize() {}
 
   onUpdate() {
     this.material.color = this.color

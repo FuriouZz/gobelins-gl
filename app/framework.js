@@ -1,5 +1,6 @@
 import { Dispatcher } from 'lol/dist/esm/dispatcher'
 import * as LoaderUtils from './utils/loader'
+import { GUI as G } from 'dat.gui';
 
 class $Framework {
 
@@ -8,7 +9,9 @@ class $Framework {
     this.update = new Dispatcher()
     this.render = new Dispatcher()
     this.resize = new Dispatcher()
+    this.debug  = new Dispatcher()
     this.load = LoaderUtils
+    this.debugEnabled = false
 
     this._onStart  = this._onStart.bind(this)
     this._onResize = this._onResize.bind(this)
@@ -32,10 +35,8 @@ class $Framework {
     if (typeof options.onStart  == 'function') this.start .on(options.onStart)
     if (typeof options.onUpdate == 'function') this.update.on(options.onUpdate)
     if (typeof options.onRender == 'function') this.render.on(options.onRender)
-    if (typeof options.onResize == 'function') {
-      this.resize.on(options.onResize)
-      options.onResize()
-    }
+    if (typeof options.onResize == 'function') this.resize.on(options.onResize)
+    if (typeof options.onDebug  == 'function') this.debug.on(options.onDebug)
     return this
   }
 
@@ -68,8 +69,14 @@ class $Framework {
 
   _onStart() {
     this._onResize()
+    if (this.debugEnabled) this._onDebug()
     this._onRAF()
     this.start.dispatch()
+  }
+
+  _onDebug() {
+    this.GUI = new G()
+    this.debug.dispatch(this.GUI)
   }
 
   _onRAF(time) {

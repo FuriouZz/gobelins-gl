@@ -40,6 +40,14 @@ export function MirrorMaterial() {
       vertexShader: shader.get('vertex'),
       fragmentShader: shader.get('fragment'),
       uniforms: {
+        uMirror: {
+          value: {
+            repeatX: 2.0,
+            offsetX: 0.5,
+            repeatY: 2.0,
+            offsetY: 0.5,
+          }
+        },
         uResolutionRatio: { value: 1.0 },
         uTime: { value: 1.0 },
         uTex0: { value: null },
