@@ -1,5 +1,5 @@
 import { Cache } from "../utils/cache"
-import { RawShaderMaterial, MeshPhongMaterial } from "three"
+import { RawShaderMaterial, MeshPhongMaterial, ShaderMaterial } from "three"
 import { load_shader } from "./shaders"
 import { Color } from "../utils/color"
 import { texture } from "../utils/loader"
@@ -19,6 +19,13 @@ export function WaveMaterial() {
         uTime: { value: 1.0 },
         uNoise: { value: null },
         uColor: { value: new Color(0x2d9d9d) },
+        uNoiseData: {
+          value: {
+            size: 0.75,
+            strength: 0.3,
+            influence: 0.0125,
+          }
+        }
       }
     })
   })
@@ -51,6 +58,24 @@ export function MirrorMaterial() {
         uResolutionRatio: { value: 1.0 },
         uTime: { value: 1.0 },
         uTex0: { value: null },
+      }
+    })
+  })
+}
+
+export function SphereMaterial() {
+  return C.fetch('sphere', async () => {
+    const shader = await load_shader('shaders/sphere.glsl')
+
+    return new ShaderMaterial({
+      vertexShader: shader.get('vertex'),
+      fragmentShader: shader.get('fragment'),
+      transparent: true,
+      uniforms: {
+        uProgress: { value: 0.0 },
+        uNoise: { value: null },
+        uTime: { value: 1.0 },
+        uColor: { value: new Color(0xffffff) },
       }
     })
   })

@@ -1,62 +1,53 @@
+import { SphereGeometry } from "../assets/geometries";
+import { SphereMaterial } from "../assets/materials";
+import { bind } from "lol/dist/esm/function";
 import { Mesh, RepeatWrapping, RGBAFormat, Color } from "three";
-import { WaveGeometry } from "../assets/geometries";
-import { WaveMaterial } from "../assets/materials";
 import { Framework } from "../framework";
 import { texture } from "../utils/loader";
-import { bind } from "lol/dist/esm/function";
 
-export class Wave {
+export class Sphere {
 
   constructor({ geometry, material, textures }) {
-    bind(this, 'onResize', 'onUpdate', 'onDebug')
+    bind(this, 'onDebug', 'onUpdate')
 
     this.geometry = geometry
     this.material = material
     this.textures = textures
     this.uniforms = this.material.uniforms
     this.uniforms.uNoise.value = this.textures.uNoise
-    this.uniforms.uColor.value = (new Color()).setHex(0x2d9d9d)
+    this.uniforms.uColor.value = (new Color()).setHex(0xffffff)
     this.mesh = new Mesh(this.geometry, this.material)
+    this.mesh.scale.set(0.25, 0.25, 0.25)
 
     this.controller = {
-      color: 0x2d9d9d,
-      noiseSize: 0.75,
-      noiseStrength: 0.75,//0.301,
-      noiseInfluence: 1.0,
+      progress: 0.5,
+      color: 0xffffff
     }
 
     Framework.configure(this)
   }
 
   /**
-   *
    * @param {dat.GUI} GUI
+   * @memberof Cube
    */
   onDebug(GUI) {
-    const f = GUI.addFolder('wave')
+    const f = GUI.addFolder('sphere')
     f.addColor(this.controller, 'color').onChange((v) => {
       this.uniforms.uColor.value.setHex(v)
     })
-    f.add(this.controller, 'noiseSize', 0, 1)
-    f.add(this.controller, 'noiseStrength', 0, 1)
-    f.add(this.controller, 'noiseInfluence', 0, 1)
-  }
-
-  onResize() {
-    this.uniforms.uResolutionRatio.value = Framework.width / Framework.height
+    f.add(this.controller, 'progress', 0, 1)
   }
 
   onUpdate() {
+    this.uniforms.uProgress.value = this.controller.progress
     this.uniforms.uTime.value = Framework.time
-    this.uniforms.uNoiseData.value.size = this.controller.noiseSize
-    this.uniforms.uNoiseData.value.strength = this.controller.noiseStrength
-    this.uniforms.uNoiseData.value.influence = this.controller.noiseInfluence
   }
 
   static async init() {
     const [geometry, material, uNoise] = await Promise.all([
-      await WaveGeometry(),
-      await WaveMaterial(),
+      await SphereGeometry(),
+      await SphereMaterial(),
       await (async function() {
         const t = await texture('images/perlin.jpg')
         t.wrapS = RepeatWrapping
@@ -66,7 +57,7 @@ export class Wave {
       })()
     ])
 
-    return new Wave({
+    return new Sphere({
       geometry,
       material,
       textures: {

@@ -22,14 +22,22 @@ uniform float uResolutionRatio;
 uniform sampler2D uNoise;
 uniform vec3 uColor;
 
+struct NoiseData {
+  float size;
+  float strength;
+  float influence;
+};
+
+uniform NoiseData uNoiseData;
+
 {{ include('shaders/common.glsl') }}
 
-vec4 noise4D(in vec2 uv, in float uTime) {
+vec4 noise4D(in vec2 uv, in float time) {
   vec4 c;
-  c.r = texture2D(uNoise, uv+vec2(uTime, 0.2)).r;
-  c.g = texture2D(uNoise, uv+vec2(0.4, uTime*0.9)).r;
-  c.b = texture2D(uNoise, uv+vec2(0.51, -uTime*0.9)).r;
-  c.a = texture2D(uNoise, uv+vec2(vec2(-uTime*0.8765, 0.67))).r;
+  c.r = texture2D(uNoise, uv+vec2(time, 0.2)).r;
+  c.g = texture2D(uNoise, uv+vec2(0.4, time*0.9)).r;
+  c.b = texture2D(uNoise, uv+vec2(0.51, -time*0.9)).r;
+  c.a = texture2D(uNoise, uv+vec2(vec2(-time*0.8765, 0.67))).r;
   return c;
 }
 
@@ -42,20 +50,20 @@ void main() {
   // Compuse noise
   vec2 uv = v_uv;
   uv += uTime * 0.25;
-  uv *= 0.75;
+  uv *= uNoiseData.size;
 
   vec4 noise = noise4D(uv, uTime*0.2);
   float n0 = (noise.r + noise.g + noise.b + noise.a);
   float n1 = n0;
   n0 -= 2.0;
-  n0 *= 0.3;
+  n0 *= uNoiseData.strength;
   // n0 *= 0.073;
 
   // Pythagore
   float diagonal = sqrt(uResolutionRatio*uResolutionRatio+1.0*1.0);
 
   // Compute circle
-  float c = circle(radius+n0, diagonal*0.25, 0.0125+(n1*0.05));
+  float c = circle(radius+n0, diagonal*0.25, 0.0125+(n1*0.05*uNoiseData.influence));
   float a = cos(M_PI * 10.0 * (radius+((noise.r+noise.a)*0.12)));
   float b = cos(M_PI * 175.0 * (uTime*0.02+radius));
 

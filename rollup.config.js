@@ -16,7 +16,8 @@ if (argv.w || argv.watch) {
     livereload({
       watch: [ "public", "app/assets/**/*" ],
       verbose: true,
-      port: 35730
+      port: 35730,
+      usePolling: true
     })
   )
 }

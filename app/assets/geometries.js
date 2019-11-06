@@ -1,4 +1,4 @@
-import { BufferGeometry, BufferAttribute, BoxBufferGeometry } from "three"
+import { BufferGeometry, BufferAttribute, BoxBufferGeometry, SphereBufferGeometry } from "three"
 import { Cache } from "../utils/cache"
 
 const C = new Cache
@@ -39,5 +39,11 @@ export function WaveGeometry() {
 export function CubeGeometry() {
   return C.fetch('cube', async () => {
     return new BoxBufferGeometry()
+  })
+}
+
+export function SphereGeometry() {
+  return C.fetch('sphere', async () => {
+    return new SphereBufferGeometry(1, 10, 10)
   })
 }
