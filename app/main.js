@@ -1,11 +1,13 @@
 import { Framework } from "./framework"
-import { Scene, WebGLRenderer, PerspectiveCamera, Light, PointLight, WebGLRenderTarget, RGBAFormat, OrthographicCamera } from "three"
+import { Scene, WebGLRenderer, PerspectiveCamera, Light, PointLight, WebGLRenderTarget, RGBAFormat, OrthographicCamera, ShaderLib } from "three"
 import { Wave } from "./entities/wave"
 import { load_shader } from "./assets/shaders"
 import { Cube } from "./entities/cube"
 import { Mirror } from "./entities/mirror"
 import { bind } from 'lol/dist/esm/function'
 import { Sphere } from "./entities/sphere"
+import { Plane } from "./entities/plane"
+import { Cover } from "./entities/cover"
 
 class Main {
 
@@ -25,7 +27,7 @@ class Main {
 
     this.controller = {
       bgcolor: 0xa111b,
-      mirror: true
+      mirror: false
     }
 
     this.init().then(() => {
@@ -35,25 +37,33 @@ class Main {
   }
 
   async init() {
-    const cube = await Cube.init()
-    this.rttScene.add(cube.mesh)
+    const plane = await Plane.init()
+    this.rttScene.add(plane.mesh)
 
-    let l = new PointLight()
-    l.position.set(5, 5, 5)
-    this.rttScene.add(l)
+    // const cover = await Cover.init()
+    // this.rttScene.add(cover.mesh)
 
-    l = new PointLight()
-    l.position.set(-5, 5, 5)
-    this.rttScene.add(l)
+    // const cube = await Cube.init()
+    // this.rttScene.add(cube.mesh)
 
-    const sphere = await Sphere.init()
-    this.rttScene.add(sphere.mesh)
+    // let l = new PointLight()
+    // l.position.set(5, 5, 5)
+    // this.rttScene.add(l)
 
-    const mirror = await Mirror.init(this.target)
-    this.scene.add(mirror.mesh)
+    // l = new PointLight()
+    // l.position.set(-5, 5, 5)
+    // this.rttScene.add(l)
 
-    const wave = await Wave.init()
-    this.rttScene.add(wave.mesh)
+    // const sphere = await Sphere.init()
+    // this.rttScene.add(sphere.mesh)
+
+    // const mirror = await Mirror.init(this.target)
+    // this.scene.add(mirror.mesh)
+
+    // const wave = await Wave.init()
+    // this.rttScene.add(wave.mesh)
+
+    // console.log(ShaderLib.phong.fragmentShader);
   }
 
   /**

@@ -4,7 +4,8 @@ import { load_shader } from "./shaders"
 import { Color } from "../utils/color"
 import { texture } from "../utils/loader"
 
-const C = new Cache
+export const MaterialCache = new Cache
+const C = MaterialCache
 
 export function WaveMaterial() {
   return C.fetch('wave', async () => {
@@ -78,5 +79,23 @@ export function SphereMaterial() {
         uColor: { value: new Color(0xffffff) },
       }
     })
+  })
+}
+
+export function PlaneMaterial() {
+  return C.fetch('plane', async () => {
+    const shader = await load_shader('shaders/plane.glsl')
+
+    return new ShaderMaterial({
+      vertexShader: shader.get('vertex'),
+      fragmentShader: shader.get('fragment'),
+      transparent: true,
+      uniforms: {
+        uResolutionRatio: { value: 0.0 },
+        uNoise: { value: null },
+        uTime: { value: 0.0 }
+      }
+    })
+
   })
 }
