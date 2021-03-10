@@ -51,3 +51,23 @@ Blender <!-- .element: class="fragment fade-up" -->
 
 UVMapper <!-- .element: class="fragment fade-up" -->
 </slide>
+
+<slide data-background="./assets/uv/uv.png"></slide>
+<slide data-background="./assets/uv/uv.x.png"></slide>
+<slide data-background="./assets/uv/uv.y.png"></slide>
+
+<slide>
+Texture is data
+</slide>
+
+<slide data-background-opacity="0.85" data-background="./assets/uv/noise.png">
+Example : Noise
+</slide>
+
+<slide data-background-video="./assets/uv/noise.mp4" data-background-video-loop="true" data-background-video-muted="true"></slide>
+
+<slide data-background-opacity="0.85" data-background="./assets/uv/normal_map.jpg">
+Example : Normal Map
+</slide>
+
+<slide data-background-video="./assets/uv/normal_map.mp4" data-background-video-loop="true" data-background-video-muted="true"></slide>

@@ -50,7 +50,7 @@ loop = false
 rtl = false
 
 # See https://github.com/hakimel/reveal.js/#navigation-mode
-navigationMode = 'linear'
+navigationMode = 'default'
 
 # Randomizes the order of slides each time the presentation loads
 shuffle = false
@@ -129,7 +129,7 @@ transitionSpeed = 'default' # default/fast/slow
 backgroundTransition = 'fade' # none/fade/slide/convex/concave/zoom
 
 # Number of slides away from the current that are visible
-viewDistance = 5
+viewDistance = 3
 
 # Parallax background image
 parallaxBackgroundImage = '' # e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"

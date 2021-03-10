@@ -56,12 +56,12 @@ https://mattdesl.svbtle.com/ <!-- .element: class="fragment fade-up" -->
 https://mattdesl.github.io/workshop-webgl-glsl/#/ <!-- .element: class="fragment fade-up" -->
 
 http://three-demos.glitch.me/ <!-- .element: class="fragment fade-up" -->
+
+https://threejs-journey.xyz/ <!-- .element: class="fragment fade-up" -->
 </slide>
 
 <slide>
 ### Welcome to the 3D world <!-- .element: class="fragment fade-up" -->
 
 <span>Christophe MASSOLIN ~ [@furiouzz](https://twitter.com/furiouzz)</span>  <!-- .element: class="fragment fade-up" -->
-
-<span>Work at [@makemepulse](https://twitter.com/makemepulse)</span> <!-- .element: class="fragment fade-up" -->
 </slide>
